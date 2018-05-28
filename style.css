@@ -1,0 +1,27 @@
+html {
+    font-family: "Avenir Next", Helevetica, sans-serif;
+    text-align: center;
+  }
+
+  body {
+    margin: 0 auto;
+  }
+
+  h1, h2 {
+    font-weight: 300;
+  }
+
+.hidden {
+    width: 0px;
+    height: 0px;
+}
+
+.CloudClass {
+    background-color: grey;
+    
+}  
+
+.picsize {
+    width: 100px;
+    height: 100px;
+}
