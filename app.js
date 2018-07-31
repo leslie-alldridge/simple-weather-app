@@ -13,9 +13,14 @@ function weather() {
       location.innerHTML = 'Latitude is ' + latitude + '° Longitude is ' + longitude + '°';
 
        $.getJSON(url + apiKey + "/" + latitude + "," + longitude + "?callback=?", function(data) {
-        $('#temp').html(data.currently.temperature + '° F');
-        $('#minutely').html(data.currently.summary);
-        $('#icon').html(data.currently.icon);
+        var temp = data.currently.temperature;
+        console.log(temp);
+        var summary = data.currently.summary;
+        console.log(summary);
+
+        var icon = data.currently.icon;
+        console.log(icon);
+
       });
     }
 
