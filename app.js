@@ -1,3 +1,5 @@
+var icon = "";
+
 function weather() {
 
     var location = document.getElementById("location");
@@ -18,11 +20,50 @@ function weather() {
         var summary = data.currently.summary;
         console.log(summary);
 
-        var icon = data.currently.icon;
+        icon = data.currently.icon;
         console.log(icon);
 
-      });
-    }
+        
+          var imgHome = document.getElementById("weatherIcon");
+          switch(icon){
+            case 'clear-day':
+            imgHome.src="images/sun.svg"
+            break;
+            case 'clear-night':
+            break;
+    
+            case 'rain':
+            break;
+    
+            case 'snow':
+            break;
+    
+            case 'sleet':
+            break;
+    
+            case 'wind':
+            break;
+    
+            case 'fog':
+            break;
+    
+            case 'cloudy':
+            break;
+    
+            case 'partly-cloudy-day':
+            imgHome.src="images/sun.svg"
+            console.log("case");
+            break;
+    
+            case 'partly-cloudy-night':
+            break;
+    
+            default:
+          }
+      
+      
+
+    })}
 
     function error() {
       location.innerHTML = "Unable to retrieve your location";
@@ -30,15 +71,7 @@ function weather() {
 
     location.innerHTML = "Locating...";
   }
-
-  function iconSelect (){
-      if (document.getElementById("icon").innerHTML = "cloudy"){
-          console.log("clouds");   
-          document.getElementById("icon").classList.add('CloudClass');
-          document.getElementById("cloud").classList.remove('hidden');
-          document.getElementById("cloud").classList.add('picsize');
-      }
-  }
+  
 
   weather();
-  iconSelect();
+  //iconSelect();
